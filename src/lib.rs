@@ -1,14 +1,29 @@
 // SPDX-License-Identifier: Apache-2.0
-//! SigmaOS-cinnamon-session - Part of SigmaOS multi-repository architecture
-//! Inspired by Linux Mint and Omarchy Linux
+//! Minimal implementation for component
 
 #![no_std]
+
+pub struct Component {
+    name: &'static str,
+}
+
+impl Component {
+    pub fn new() -> Self {
+        Self { name: "SigmaOS Component" }
+    }
+}
+
+impl Default for Component {
+    fn default() -> Self {
+        Self::new()
+    }
+}
 
 #[cfg(test)]
 mod tests {
     #[test]
-    fn it_works() {
-        let result = 2 + 2;
-        assert_eq!(result, 4);
+    fn test_creation() {
+        let c = super::Component::new();
+        assert_eq!(c.name, "SigmaOS Component");
     }
 }
