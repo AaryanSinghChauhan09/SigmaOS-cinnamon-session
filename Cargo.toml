@@ -1,11 +1,15 @@
 [package]
-name = "sigmaos_cinnamon_session"
+name = "SigmaOS-cinnamon-session"
 version = "0.1.0"
 edition = "2021"
 license = "Apache-2.0"
-
-[dependencies]
+description = "SigmaOS sigmaos_cinnamon_session component"
 
 [lib]
 name = "sigmaos_cinnamon_session"
 path = "src/lib.rs"
+
+[dependencies]
+thiserror = "1"
+
+[dev-dependencies]
